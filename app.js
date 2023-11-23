@@ -32,3 +32,37 @@ const cta = document.getElementById("cta");
 ctaIcon.addEventListener("click", () => {
   cta.classList.add("close");
 });
+
+
+// progress bar
+
+
+// const progressBtn = document.getElementById("step");
+// const progressNumber = document.getElementById("progress-number");
+// const progress = document.getElementById("progressBar");
+
+// let progressWidth = 0;
+// let progressNumberValue = 0;
+// let progressEnd = 5;  
+
+// // increment progress bar by 20% on click
+// // increment progress number by 1 on click
+
+
+// progressBtn.addEventListener("click", () => {
+//   // increment progress bar
+//   progressWidth += 20;
+//   if (progressWidth > 100) {
+//     progressWidth = 100;
+//   }
+//   progress.style.width = `${progressWidth}%`;
+
+//   // increment progress number
+//   progressNumberValue += 1;
+
+//   if (progressNumberValue > progressEnd) {
+//     progressNumberValue = progressEnd;
+//   }
+//   progressNumber.innerHTML = progressNumberValue;
+
+// });
