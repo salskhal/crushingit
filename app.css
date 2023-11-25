@@ -131,8 +131,16 @@ nav {
   display: flex;
   align-items: center;
   cursor: pointer;
+  border: none;
 }
 
+
+.bell button{
+  background: transparent;
+  border: none;
+  /* outline: none; */
+  cursor: pointer;
+}
 .user-component {
   border-radius: 0.5rem;
   padding: 0.125rem 0.125rem 0.125rem 0.5rem;
@@ -141,6 +149,8 @@ nav {
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  height: 100%;
+  border : none;
 }
 
 .user-name {
