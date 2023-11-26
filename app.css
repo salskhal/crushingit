@@ -553,6 +553,15 @@ nav {
   border-radius: 0.25rem;
 }
 
+
+.main-content--header-icon{
+  /* transform: rotate(180deg); */
+}
+
+.main-content--header-icon.rotate{
+  transform: rotate(180deg);
+}
+
 /* Steps to checkList */
 
 .step-checklist {
@@ -562,8 +571,17 @@ nav {
   gap: 1rem;
 }
 
-.step{
+.step-checklist.hide{
+  display: none;
+}
 
+.step-checklist.hide{
+
+}
+
+
+
+.step {
   display: flex;
   padding: 0.5rem 0.5rem 0.75rem 0.5rem;
   align-items: center;
@@ -617,7 +635,7 @@ nav {
 
 .step .step-content--description-text {
   color: var(--gray-100, #616161);
-  
+
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -653,6 +671,23 @@ nav {
   font-weight: 600;
   line-height: 130%; /* 0.975rem */
 }
+.btn-light {
+  display: flex;
+  padding: 0.375rem 0.75rem;
+  align-items: center;
+  border: none;
+  background: transparent;
+  gap: 0.5rem;
+}
+
+.btn-light p {
+  color: #323232;
+  font-family: Inter;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 0.975rem */
+}
 
 .step.active .step-img {
   display: flex;
@@ -660,4 +695,77 @@ nav {
 
 .step-img {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .step.active .step-img {
+    display: none;
+  }
+}
+
+/* step checkbox */
+.step-item-checkbox {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  /* height: 124px;
+  width: 124px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  /* border: 2px solid #b5b5b5; */
+
+  transition: all 100ms ease-in;
+}
+
+/* .step-item-checkbox:focus {
+  outline: 4px solid #005bd3;
+  outline-offset: 4px;
+} */
+
+/* .step-item-checkbox:focus .not-complete-icon circle {
+  fill: #d9d9d9;
+  stroke-dasharray: 0 0;
+} */
+
+.step-item-checkbox:hover .not-complete-icon circle {
+  stroke-dasharray: 0 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading-icon {
+  animation: spin 1000ms linear infinite;
+}
+
+.complete-icon {
+  animation: zoom-in-spin 300ms linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes zoom-in-spin {
+  from {
+    transform: scale(0) rotate(270deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
 }

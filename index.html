@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -211,7 +212,7 @@
                     <h2>Setup guide</h2>
                     <p>Use this personalized guide to get your store up and running.</p>
                 </div>
-                <div class="main-content--header-icon">
+                <div class="main-content--header-icon" id="content-icon">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M9.71967 12.4697C10.0126 12.1768 10.4874 12.1768 10.7803 12.4697L14.25 15.9393L17.7197 12.4697C18.0126 12.1768 18.4874 12.1768 18.7803 12.4697C19.0732 12.7626 19.0732 13.2374 18.7803 13.5303L14.7803 17.5303C14.4874 17.8232 14.0126 17.8232 13.7197 17.5303L9.71967 13.5303C9.42678 13.2374 9.42678 12.7626 9.71967 12.4697Z"
@@ -228,158 +229,234 @@
                 </div>
             </div>
             <!-- steps checklist -->
-            <div class="step-checklist">
+            <div class="step-checklist" id="step-checklist">
                 <!-- step 1 -->
                 <div class="step">
                     <div class="step-content-container">
                         <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-                            </svg>
+                            <button class="step-item-checkbox" id="step-item-checkbox">
+                                <svg class="not-complete-icon" id="not-complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                </svg>
+
+                                <svg class="loading-icon hidden" id="loading-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                        stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="complete-icon hidden" id="complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D"
+                                        stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="step-contents">
                             <div class="step-content--header">
-                                <h2>Step 1</h2>
+                                <h2>Customize your online store</h2>
                             </div>
                             <div class="step-content--description">
-                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
-                                    Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
+                                <p class="step-content--description-text">Choose a theme and add your logo, colors, and images to reflect your brand. Learn more
                                 </p>
                                 <div class="step-buttons">
                                     <button class="btn-dark">
-                                        <p class="btn-dark-text">Add product</p>
+                                        <p class="btn-dark-text">Customize theme</p>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="step-img">
-                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="payment">
                     </div>
                 </div>
                 <!-- step 2 -->
                 <div class="step">
                     <div class="step-content-container">
                         <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-                            </svg>
+                            <button class="step-item-checkbox" id="step-item-checkbox">
+                                <svg class="not-complete-icon" id="not-complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                </svg>
+
+                                <svg class="loading-icon hidden" id="loading-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                        stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="complete-icon hidden" id="complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D"
+                                        stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="step-contents">
                             <div class="step-content--header">
-                                <h2>Step 1</h2>
+                                <h2>Add your first product</h2>
                             </div>
                             <div class="step-content--description">
-                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
-                                    Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
+                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell. Learn more
                                 </p>
                                 <div class="step-buttons">
                                     <button class="btn-dark">
                                         <p class="btn-dark-text">Add product</p>
                                     </button>
+                                    <button class="btn-light"><p>Import product</p></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="step-img">
-                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        <img src="https://crushingit.tech/hackathon-assets/product.png" alt="payment">
                     </div>
                 </div>
                 <!-- step 3 -->
                 <div class="step">
                     <div class="step-content-container">
                         <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-                            </svg>
+                            <button class="step-item-checkbox" id="step-item-checkbox">
+                                <svg class="not-complete-icon" id="not-complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                </svg>
+
+                                <svg class="loading-icon hidden" id="loading-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                        stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="complete-icon hidden" id="complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D"
+                                        stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="step-contents">
                             <div class="step-content--header">
-                                <h2>Step 1</h2>
+                                <h2>Add a custom domain</h2>
                             </div>
                             <div class="step-content--description">
-                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
-                                    Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
+                                <p class="step-content--description-text">Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. Learn more
                                 </p>
                                 <div class="step-buttons">
                                     <button class="btn-dark">
-                                        <p class="btn-dark-text">Add product</p>
+                                        <p class="btn-dark-text">Add domain</p>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="step-img">
-                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        <img src="https://crushingit.tech/hackathon-assets/website.png" alt="payment">
                     </div>
                 </div>
                 <!-- step 3 -->
                 <div class="step">
                     <div class="step-content-container">
                         <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-                            </svg>
+                            <button class="step-item-checkbox" id="step-item-checkbox">
+                                <svg class="not-complete-icon" id="not-complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                </svg>
+
+                                <svg class="loading-icon hidden" id="loading-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                        stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="complete-icon hidden" id="complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D"
+                                        stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="step-contents">
                             <div class="step-content--header">
-                                <h2>Step 1</h2>
+                                <h2>Name your store</h2>
                             </div>
                             <div class="step-content--description">
-                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
-                                    Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
+                                <p class="step-content--description-text">Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. Learn more
                                 </p>
                                 <div class="step-buttons">
                                     <button class="btn-dark">
-                                        <p class="btn-dark-text">Add product</p>
+                                        <p class="btn-dark-text">Name store</p>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="step-img">
-                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="payment">
                     </div>
                 </div>
                 <!-- step 3 -->
                 <div class="step">
                     <div class="step-content-container">
                         <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-                            </svg>
+                            <button class="step-item-checkbox" id="step-item-checkbox">
+                                <svg class="not-complete-icon" id="not-complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                </svg>
+
+                                <svg class="loading-icon hidden" id="loading-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                        stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="complete-icon hidden" id="complete-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D"
+                                        stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="step-contents">
                             <div class="step-content--header">
-                                <h2>Step 1</h2>
+                                <h2>Set up a payment provider</h2>
                             </div>
                             <div class="step-content--description">
-                                <p class="step-content--description-text">Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
-                                    Write a description, add photos, and set pricing for the products you plan to sell.
-                                    Learn more
+                                <p class="step-content--description-text">Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and set it up with your Shopify store. Learn more
                                 </p>
                                 <div class="step-buttons">
                                     <button class="btn-dark">
-                                        <p class="btn-dark-text">Add product</p>
+                                        <p class="btn-dark-text">Set up payment</p>
                                     </button>
                                 </div>
                             </div>
