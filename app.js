@@ -33,9 +33,7 @@ ctaIcon.addEventListener("click", () => {
   cta.classList.add("close");
 });
 
-
-// progress bar
-
+// // progress bar
 
 // const progressBtn = document.getElementById("step");
 // const progressNumber = document.getElementById("progress-number");
@@ -43,11 +41,10 @@ ctaIcon.addEventListener("click", () => {
 
 // let progressWidth = 0;
 // let progressNumberValue = 0;
-// let progressEnd = 5;  
+// let progressEnd = 5;
 
 // // increment progress bar by 20% on click
 // // increment progress number by 1 on click
-
 
 // progressBtn.addEventListener("click", () => {
 //   // increment progress bar
@@ -64,5 +61,36 @@ ctaIcon.addEventListener("click", () => {
 //     progressNumberValue = progressEnd;
 //   }
 //   progressNumber.innerHTML = progressNumberValue;
-
 // });
+
+
+
+// accrodion script
+
+const accordion = document.getElementsByClassName("step");
+
+// Todo
+// 1. set first accordion to active
+// 2. loop through all accordion
+// 3. when accordion is clicked, remove active class from all accordion
+// 4. add active class to clicked accordion
+
+
+// 1. set first accordion to active
+accordion[0].classList.add("active");
+
+// 2. loop through all accordion
+for (let i = 0; i < accordion.length; i++) {
+  // 3. when accordion is clicked, remove active class from all accordion
+  accordion[i].addEventListener("click", () => {
+    for (let j = 0; j < accordion.length; j++) {
+      accordion[j].classList.remove("active");
+    }
+    // 4. add active class to clicked accordion
+    accordion[i].classList.add("active");
+  });
+}
+
+
+
+

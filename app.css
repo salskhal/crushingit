@@ -25,6 +25,7 @@
 
   /* states color */
   --states-hover: #f1f1f1;
+  --font-family: "Inter", sans-serif;
 }
 
 /* css variables */
@@ -53,9 +54,11 @@
 
 /* create a global style */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   background-color: var(--bg);
 }
+
+/* btn   */
 
 /* Nav section */
 nav {
@@ -134,8 +137,7 @@ nav {
   border: none;
 }
 
-
-.bell button{
+.bell button {
   background: transparent;
   border: none;
   /* outline: none; */
@@ -150,7 +152,10 @@ nav {
   gap: 1rem;
   cursor: pointer;
   height: 100%;
-  border : none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
 }
 
 .user-name {
@@ -168,6 +173,7 @@ nav {
   align-items: center;
   color: rgba(0, 0, 0, 0.4);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -397,7 +403,7 @@ nav {
 /* content styling */
 
 .content {
-  max-width: 1200px;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 2rem 0;
   /* border: 1px solid red; */
@@ -547,110 +553,111 @@ nav {
   border-radius: 0.25rem;
 }
 
-/* main-content--carousel */
+/* Steps to checkList */
 
-.main-content--carousel {
-  margin-top: 1rem;
-  padding: 0.5rem;
+.step-checklist {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
-.carousel-content {
+.step{
+
   display: flex;
-  gap: 1rem;
+  padding: 0.5rem 0.5rem 0.75rem 0.5rem;
   align-items: center;
-  padding: 1rem;
+  gap: 6rem;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.carousel-content.active {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  border: 1px solid var(--s50, #dbdbdb);
-  border-radius: 0.5rem;
+.step.active {
+  border-radius: 0.625rem;
   background: #f3f3f3;
 }
 
-.carousel-active-content {
+.step .step-content-container {
   display: flex;
-  justify-content: space-between;
-  gap: 6rem;
+  /* align-items: center; */
+  gap: 1rem;
 }
 
-.setup-img img {
-  width: 100%;
-  height: 100%;
+.step .step-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.carousel-content .setup-header {
-  color: var(--text-dark, #303030);
+.step.active .step-content--header h2 {
   font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: var(--text-dark, #303030);
+}
+
+.step .step-content--header h2 {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--text-dark, #303030);
+}
+
+.step.active .step-content--description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step .step-content--description {
+  display: none;
+}
+
+.step .step-content--description-text {
+  color: var(--gray-100, #616161);
+  
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
 }
 
-.carousel-content .setup-description {
-  display: none;
-}
-
-.carousel-content .setup-img {
-  display: none;
-}
-
-.carousel-content.active .setup-description {
-  display: block;
-  color: var(--text-mid, #616161);
-  font-size: 0.95rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-
-.carousel-content.active .setup-img {
-  display: block;
-}
-
-.setup-text{
+.step .step-buttons {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-
 }
 
-.setup-btn {
+.btn-dark {
   display: flex;
   padding: 0.375rem 0.75rem;
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.375rem;
-  border-top: 1.5px solid var(--s100, rgba(255, 255, 255, 0.2));
-  border-right: 1.5px solid var(--s100, rgba(255, 255, 255, 0.2));
-  border-left: 1.5px solid var(--s100, rgba(255, 255, 255, 0.2));
+  border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
   background: #404040;
   box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
     0px 2px 0px 0px #000;
+  cursor: pointer;
 }
 
-
-.setup-btn p {
-  color: var(--text-light, #e3e3e3);
+.btn-dark p {
+  color: #f6f3f6;
+  font-family: Inter;
   font-size: 0.85rem;
   font-style: normal;
   font-weight: 600;
   line-height: 130%; /* 0.975rem */
 }
 
-@media (max-width: 768px) {
-  .carousel-content.active .setup-img {
-    display: none;
-  }
+.step.active .step-img {
+  display: flex;
 }
 
-.checking {
-  height: 26px;
-  width: 26px;
-  border-radius: 50%;
-  border: 2px dashed #8a8a8a;
+.step-img {
+  display: none;
 }
