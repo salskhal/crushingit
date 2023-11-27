@@ -556,6 +556,7 @@ nav {
 
 .main-content--header-icon{
   /* transform: rotate(180deg); */
+  cursor: pointer;
 }
 
 .main-content--header-icon.rotate{
